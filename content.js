@@ -7,17 +7,13 @@ function applyTheme (themeId) {
     const theme = themes[themeId];
     if (!theme) { console.log("theme not found"); return; }
 
-    const observer = new MutationObserver(() => {
-        const sidebarHeader = document.querySelector(`[data-testid="chatlist-header"]`);
-        if (sidebarHeader) {
-            sidebarHeader.style.backgroundColor = theme.sidebarHeader;
-            observer.disconnect();
-        }
-    });
+    function styleWhatsapp () {
+        styleSidebar(theme);
+    }
 
+    const observer = new MutationObserver(() => styleWhatsapp());
     observer.observe(document.body, { childList: true, subtree: true });
-    const sidebarHeader = document.querySelector(`[data-testid="chatlist-header"]`);
-    if (sidebarHeader) sidebarHeader.style.backgroundColor = theme.sidebarHeader;
+    styleWhatsapp();
 }
 
 chrome.storage.local.get(["activeTheme"], (result) => {

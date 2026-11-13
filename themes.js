@@ -2,7 +2,9 @@
 const themes = {
     midnight: {
         name: "Midnight",
-        sidebarHeader: "#202C33"
+        sidebarHeader: "#202C33",
+        // navIcon: "#FFFFFF"
+        navIcon: "red"
     },
 
     lavender: {
