@@ -1,7 +1,6 @@
 chrome.runtime.onMessage.addListener((message) => {
-    if (message.action == "APPLY_THEME") {
-        applyTheme(message.themeId);
-    }
+    if (message.action == "APPLY_THEME") applyTheme(message.themeId);
+    if (message.action == "RESET_THEME") resetTheme();
 })
 
 function applyTheme (themeId) {
@@ -16,15 +15,18 @@ function applyTheme (themeId) {
         }
     });
 
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-    });
-
+    observer.observe(document.body, { childList: true, subtree: true });
     const sidebarHeader = document.querySelector(`[data-testid="chatlist-header"]`);
     if (sidebarHeader) sidebarHeader.style.backgroundColor = theme.sidebarHeader;
 }
 
 chrome.storage.local.get(["activeTheme"], (result) => {
     if (result.activeTheme) applyTheme(result.activeTheme);
-})
+});
+
+function resetTheme () {
+    console.log("RESET")
+    const sidebarHeader = document.querySelector('[data-testid="chatlist-header"]');
+
+    if (sidebarHeader) sidebarHeader.style.removeProperty("background-color");
+}

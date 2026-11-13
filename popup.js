@@ -13,3 +13,12 @@ document.addEventListener("click", async (event) => {
         themeId: themeId
     });
 });
+
+document
+.getElementById("resetbtn")
+.addEventListener("click", async () => {
+  await chrome.storage.local.remove("activeTheme");
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  console.log("RESET BROAD")
+  chrome.tabs.sendMessage(tab.id, { action: "RESET_THEME" });
+});
