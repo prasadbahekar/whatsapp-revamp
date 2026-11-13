@@ -1,0 +1,20 @@
+
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Themes",
+  "version": "1.0",
+  "description": "Revamp the appearance of WhatsApp Web",
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
