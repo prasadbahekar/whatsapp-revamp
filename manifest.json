@@ -9,12 +9,14 @@
     "default_popup": "popup.html"
   },
 
+  "permissions": ["tabs"],
+
   "content_scripts": [
     {
       "matches": [
         "https://web.whatsapp.com/*"
       ],
-      "js": ["content.js"]
+      "js": ["content.js", "themes.js"]
     }
   ]
 }
