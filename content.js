@@ -6,9 +6,9 @@ chrome.runtime.onMessage.addListener((message) => {
 function applyTheme (themeId) {
     const theme = themes[themeId];
     if (!theme) { console.log("theme not found"); return; }
+    setVariables(theme);
 
     function styleWhatsapp () {
-        styleSidebar(theme);
         styleChatbar(theme);
     }
 

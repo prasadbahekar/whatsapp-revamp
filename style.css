@@ -1,0 +1,84 @@
+/* Navigation */
+
+[data-testid="chatlist-header"] {
+    background-color: var(--navigation-bg) !important;
+}
+
+button[data-navbar-item="true"] {
+  color: var(--nav-icon) !important;
+}
+
+button[data-navbar-item="true"][data-navbar-item-selected="true"] {
+  color: var(--selected-nav-icon) !important;
+}
+
+[role="status"] {
+    background-color: var(--accent) !important;
+}
+
+/* Sidebar */
+[aria-label='New chat'] {
+    background-color: var(--accent) !important;
+    scale: 0.9 !important;
+}
+
+[data-testid='chat-list-search-container'] {
+    background-color: var(--sidebar-bg) !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 56px !important;
+}
+
+.search-container > * > * > * > * > * {
+  background-color: var(--search-background) !important;
+}
+
+[aria-label="chat-list-filters"] {
+    background: var(--sidebar-bg) !important;
+}
+
+[aria-controls='chat-list'] {
+  background: var(--filter-background) !important;
+}
+
+[aria-controls='chat-list'][aria-selected="true"] {
+  background: var(--filter-selected) !important;
+}
+
+[aria-label='Locked chats'] {
+    background: var(--sidebar-bg) !important;
+    margin: 0 !important;
+    padding: 4px 0 !important;
+}
+
+[aria-label='Chat list'] {
+    background: var(--sidebar-bg) !important;
+}
+
+[data-testid="cell-frame-container"] {
+    background-color: var(--sidebar-bg) !important;
+    padding-bottom: 4px !important;
+    transition: background-color 0.2s ease;
+}
+
+[data-testid="message-yourself-row"] {
+    background-color: var(--sidebar-bg) !important;
+    padding-bottom: 4px !important;
+    transition: background-color 0.2s ease;
+}
+
+[data-testid="cell-frame-container"]:hover {
+    background-color: var(--chat-hover) !important;
+}
+
+a {
+    color: var(--accent) !important;
+}
+
+[data-testid="no-filtered-chats-container"] button {
+    color: var(--accent) !important;
+}
+
+#pane-side {
+    background: var(--sidebar-bg) !important;
+    scrollbar-color: var(--nav-icon) var(--sidebar-bg);
+}
