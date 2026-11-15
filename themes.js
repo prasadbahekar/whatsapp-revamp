@@ -13,6 +13,7 @@ const themes = {
         searchBackground: "#2A2F32",
         filterBackground: "#111B21",
         filterSelected: "#004D40",
+        chatListHover: "#202C33",
     },
 
     lavender: {
