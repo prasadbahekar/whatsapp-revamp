@@ -9,6 +9,7 @@ function applyTheme (themeId) {
 
     function styleWhatsapp () {
         styleSidebar(theme);
+        styleChatbar(theme);
     }
 
     const observer = new MutationObserver(() => styleWhatsapp());
