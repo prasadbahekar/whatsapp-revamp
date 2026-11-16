@@ -19,6 +19,8 @@ const themes = {
         chatHeader: "#111B21",
         incomingMessage: "#202C33",
         outgoingMessage: "#005C4B",
+        messageInputBackground: "#202C33",
+        messageInputArea: "#111B21",
     },
 
     lavender: {

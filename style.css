@@ -96,15 +96,35 @@ a {
 
 /* Chats */
 
+[data-testid="conversation-panel-messages"] {
+    background: var(--chat-bg) !important;
+}
+
 [data-testid="conversation-header"] {
     background: var(--chat-header) !important;
 }
 
-/* [data-testid="tail-out"] {
-    color: red !important;
+[data-testid="compose-box"] {
+    background-color: var(--chat-bg);
 }
 
-div:has(> span[aria-label="You:"]) {
-  background-color: red;
-  border-radius: 4px;
-} */
+[data-testid="compose-box"] > span > div > div > div {
+    background-color: var(--msg-area);
+}
+
+[data-testid="icon-down-context"],
+[data-testid="icon-down-context"] > span,
+[data-testid="icon-down-context"] svg {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+
+[aria-label="Scroll to bottom"] {
+    background-color: var(--msg-bg) !important;
+}
+
+div[role="menu"] > div {
+    background-color: var(--chat-bg);
+}

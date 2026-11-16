@@ -12,6 +12,8 @@ function setVariables (theme) {
     root.style.setProperty("--accent", theme.accent);
     root.style.setProperty("--chat-bg", theme.chatBackground);
     root.style.setProperty("--chat-header", theme.chatHeader);
+    root.style.setProperty("--msg-bg", theme.messageInputBackground);
+    root.style.setProperty("--msg-area", theme.messageInputArea);
 }
 
 function styleChatbar (theme) {
