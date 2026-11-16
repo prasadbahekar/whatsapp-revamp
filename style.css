@@ -1,4 +1,4 @@
-/* Navigation */
+/*! Navigation */
 
 [data-testid="chatlist-header"] {
     background-color: var(--navigation-bg) !important;
@@ -16,7 +16,8 @@ button[data-navbar-item="true"][data-navbar-item-selected="true"] {
     background-color: var(--accent) !important;
 }
 
-/* Sidebar */
+/*! Sidebar */
+
 [aria-label='New chat'] {
     background-color: var(--accent) !important;
     scale: 0.9 !important;
@@ -82,3 +83,28 @@ a {
     background: var(--sidebar-bg) !important;
     scrollbar-color: var(--nav-icon) var(--sidebar-bg);
 }
+
+/*! Intro Panel */
+
+[data-testid="intro-panel"] {
+    background: var(--chat-bg) !important;
+}
+
+[data-testid="intro_panel_v2_title_card"] {
+    background: transparent !important;
+}
+
+/* Chats */
+
+[data-testid="conversation-header"] {
+    background: var(--chat-header) !important;
+}
+
+/* [data-testid="tail-out"] {
+    color: red !important;
+}
+
+div:has(> span[aria-label="You:"]) {
+  background-color: red;
+  border-radius: 4px;
+} */

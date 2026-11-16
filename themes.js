@@ -14,6 +14,11 @@ const themes = {
         filterBackground: "#111B21",
         filterSelected: "#004D40",
         chatListHover: "#202C33",
+
+        chatBackground: "#0B141A",
+        chatHeader: "#111B21",
+        incomingMessage: "#202C33",
+        outgoingMessage: "#005C4B",
     },
 
     lavender: {
