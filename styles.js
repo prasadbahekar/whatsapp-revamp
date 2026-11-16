@@ -30,41 +30,38 @@ function styleChatbar (theme) {
     }
 
 
+    const rows = Array.from(document.querySelectorAll('[role="row"]')).filter(row => row.querySelector('[data-testid="msg-container"]'));
 
-
-
-
-
-
-
-    const RED = theme.outgoingMessage;
-
-    const rows = Array.from(document.querySelectorAll('[role="row"]'))
-    .filter(row =>
-        row.querySelector('[data-testid="msg-container"]')
-    );
-
-    for (let i = 0; i < rows.length; i++) {
-        const currentRow = rows[i];
-        const tailOut = currentRow.querySelector('[data-testid="tail-out"]');
-        if (!tailOut) continue;
-
-        for (let j = i; j < rows.length; j++) {
+    function colourGroup(start, dir, colour) {
+        for (let j = start; j < rows.length; j++) {
             const row = rows[j];
             const nextTail = row.querySelector('[data-testid="tail-in"], [data-testid="tail-out"]');
-            if (j > i && nextTail) break;
+            if (j > start && nextTail) break;
+
             const msgContainer = row.querySelector('[data-testid="msg-container"]');
             if (!msgContainer) continue;
 
             const bubble = msgContainer.querySelector(':scope > div');
+
             if (bubble) {
-                bubble.style.setProperty("background-color", RED, "important");
-                const hasTail = row.querySelector('[data-testid="tail-out"]');
-                bubble.style.setProperty("border-radius", hasTail ? "8px 0 8px 8px" : "8px", "important");
+                bubble.style.setProperty("background-color", colour, "important");
+                bubble.style.setProperty("border-radius", 
+                    dir === "out" ? (row.querySelector('[data-testid="tail-out"]') ? "8px 0 8px 8px" : "8px") 
+                    : (row.querySelector('[data-testid="tail-in"]') ? "0 8px 8px 8px" : "8px"), "important");
             }
 
-            const rowTail = row.querySelector('[data-testid="tail-out"]');
-            if (rowTail) rowTail.style.setProperty("color", RED, "important");
+            const tail = row.querySelector(`[data-testid="tail-${dir}"]`);
+            if (tail) tail.style.setProperty("color", colour, "important");
         }
     }
+
+    rows.forEach((row, i) => {
+        if (row.querySelector('[data-testid="tail-out"]')) {
+            colourGroup(i, "out", theme.outgoingMessage);
+        }
+
+        if (row.querySelector('[data-testid="tail-in"]')) {
+            colourGroup(i, "in", theme.incomingMessage);
+        }
+    });
 }
