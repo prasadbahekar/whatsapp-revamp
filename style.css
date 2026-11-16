@@ -94,7 +94,7 @@ a {
     background: transparent !important;
 }
 
-/* Chats */
+/*! Chats */
 
 [data-testid="conversation-panel-messages"] {
     background: var(--chat-bg) !important;
@@ -127,4 +127,22 @@ a {
 
 div[role="menu"] > div {
     background-color: var(--chat-bg);
+}
+
+/*! Contact Info  */
+
+[data-testid="chat-info-drawer"] {
+    background: var(--sidebar-bg) !important;
+}
+
+[data-testid="chat-info-drawer"] header {
+    background: var(--sidebar-bg) !important;
+}
+
+[data-testid="chat-info-drawer"] div {
+    background: var(--sidebar-bg) !important;
+}
+
+[data-testid="chat-info-drawer"] div div section div {
+    background: var(--sidebar-bg) !important;
 }
