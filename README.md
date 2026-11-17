@@ -19,8 +19,21 @@
 ## About
 This is my first ever broswer extension which basically adds many themes to the website of whatsapp. It is not perfect but it does add themes to most of the components. The extension may stop working if WhatsApp randomly decides to change their element's names.
 
+.
+
+## How to Install
+Here are the steps to install the WhatsApp Revamp Extension on your broswer:
+
+1. Download the Latest .crx File from the Releases
+2. Open ```chrome://extensions``` in your broswer
+3. Turn on developer mode on the top right
+4. Drag and drop the downloaded .crx file on the web browser
+5. Click on "Add Extension"
+
+WhatsApp Revamp will now be ready to use!
 
 .
+
 
 ## Tech Stack
 - **JavaScript** - 60%
