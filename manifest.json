@@ -11,13 +11,15 @@
 
   "permissions": ["tabs", "storage"],
 
+  "host_permissions": ["https://web.whatsapp.com/*"],
+
   "content_scripts": [
     {
       "matches": [
         "https://web.whatsapp.com/*"
       ],
       "css": ["style.css"],
-      "js": ["styles.js", "content.js", "themes.js"]
+      "js": ["themes.js", "styles.js", "content.js"]
     }
   ]
 }

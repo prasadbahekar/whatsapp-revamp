@@ -1,4 +1,4 @@
-const themes = {
+export const themes = {
     midnight: {
         name: "Midnight",
 

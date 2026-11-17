@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    color: #eee;
+}
+
+body {
+    width: 320px;
+    font-family: "Arimo", sans-serif;
+}
+
+header {
+    background: #111;
+    padding: 16px;
+}
+
+section {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    background-color: #222;
+}
+
+.themeBtn {
+    width: 100%;
+    border: 1px solid #888;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .1 ease all;
+}
+
+.themeBtn.active {
+    border: 1px solid #fff;
+}
+
+.themeBtn > div {
+    height: 48px;
+    display: flex;
+    overflow: hidden;
+}
+
+.themeBtn div div {
+    width: 100%;
+}
+
+.themeBtn p {
+    /* font-weight: bold; */
+    font-size: 13px;
+    padding: 4px;
+    width: 100%;
+    color: #bbb;
+    background-color: #333;
+    border-radius: 0 0 6px 6px;
+    letter-spacing: 0.5px;
+}
+
+.themeBtn.active p {
+    color: #ddd;
+    font-weight: bold;
+    letter-spacing: normal;
+}
