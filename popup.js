@@ -1,8 +1,6 @@
-import { themes } from "./themes.js";
-
 const buttons = document.querySelectorAll("[data-theme]");
 for (const btn of buttons) {
-    const theme = themes[btn.dataset.theme];
+    const theme = window.themes[btn.dataset.theme];
     const colorDivs = btn.querySelectorAll("div > div");
     colorDivs[0].style.background = theme.accent;
     colorDivs[1].style.background = theme.navigationBackground;

@@ -1,10 +1,10 @@
 chrome.runtime.onMessage.addListener((message) => {
     if (message.action == "APPLY_THEME") applyTheme(message.themeId);
     if (message.action == "RESET_THEME") resetTheme();
-})
+});
 
 function applyTheme (themeId) {
-    const theme = themes[themeId];
+    const theme = window.themes[themeId];
     if (!theme) { console.log("theme not found"); return; }
     setVariables(theme);
 

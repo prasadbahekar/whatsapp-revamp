@@ -1,4 +1,4 @@
-export const themes = {
+window.themes = {
     midnight: {
         name: "Midnight",
 
