@@ -69,7 +69,7 @@ ChatGPT has been only used for two of the following cases:
 <hr/>
 
 
-<footer align="center">
+<h5 align="center">
 
 .
 
@@ -77,4 +77,4 @@ ChatGPT has been only used for two of the following cases:
 
 Made with 🤍 by **Prasad Bahekar**
 
-</footer>
+</h5>
